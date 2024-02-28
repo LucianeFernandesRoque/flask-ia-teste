@@ -1,3 +1,6 @@
+from flask import Flask, redirect, url_for, request, render_template, session
+
+app = Flask(__name__)
 import requests, os, uuid, json
 from dotenv import load_dotenv
 load_dotenv()
