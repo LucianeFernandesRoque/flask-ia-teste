@@ -1,8 +1,6 @@
-from flask import Flask, redirect, url_for, request, render_template, session
 import requests, os, uuid, json
 from dotenv import load_dotenv
 load_dotenv()
-app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def index_post():
@@ -48,7 +46,3 @@ def index_post():
         original_text=original_text,
         target_language=target_language
     )
-
-@app.route('/', methods=['GET'])
-def index():
-    return render_template('index.html')
